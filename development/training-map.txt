@@ -1,0 +1,23 @@
+Different colour walls
+
+Add Later (Advanced Movement!)
+
+Room 1. - Movement -- Davey
+	Forwards, backwards, strafe left, strafe right, jump, double tap, crouch
+
+Room 2. - Weapons -- Xenos
+	All weapons and ammo. Shooting Gallery. Must shoot targets (Maybe reg fire and alt fire)
+
+Room 3. - Health and Armor -- xenos
+	All Health and armor.
+
+Room 4 - Powerups - Davey
+	Sproing, Haste, Double Damage, Invulnerability -- Include hurt brushes for invulnerability.
+	Include one func_explode for regular damage
+	Include one func_explode for double damage
+	Include basketball net for sproing
+
+Room 5 - Advanced Movement -- Xenos
+	Blaster, disruptor, rocket jumps
+
+Room 6 - Deathmatch -- DM-Rampage
