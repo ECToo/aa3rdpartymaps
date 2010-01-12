@@ -2,6 +2,8 @@ Different colour walls
 
 Add Later (Advanced Movement!)
 
+Intro room, with doors to different training rooms???
+
 Room 1. - Movement -- Davey
 	Forwards, backwards, strafe left, strafe right, jump, double tap, crouch
 
