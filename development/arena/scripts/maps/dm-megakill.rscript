@@ -1,0 +1,9 @@
+textures/evil/e6launchengine
+{
+    {
+        map gfx/e6launchengine_glow.tga
+        blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
+        alphashift 2.5 0.0 1.0
+        nolightmap
+    }
+}
