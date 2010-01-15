@@ -2,7 +2,7 @@ textures/arena9/lightwhite
 {
 	{
 		map gfx/beam1.tga
-		scale static 65 static 15
+		scale static 45 static 15
 		colormap 1 1 1
 		beam
 		lensflare
