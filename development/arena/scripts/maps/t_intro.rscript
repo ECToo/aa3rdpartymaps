@@ -2,7 +2,7 @@ textures/arena9/lightwhite
 {
 	{
 		map gfx/beam1.tga
-		scale static 45 static 15
+		scale static 65 static 15
 		colormap 1 1 1
 		beam
 		lensflare
@@ -20,5 +20,15 @@ textures/arena9/trim2
 	{
 		map gfx/trim2mask.tga
 		alphamask
+	}
+}
+textures/arena9/greenglass
+{
+
+	{
+		map gfx/chrome.tga
+		blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA	
+		alphashift 0 0.2 0.2
+		envmap
 	}
 }
