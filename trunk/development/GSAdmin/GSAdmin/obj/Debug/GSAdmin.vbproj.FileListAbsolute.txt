@@ -1,0 +1,42 @@
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\bin\Debug\GSAdmin.exe.config
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\bin\Debug\GSAdmin.exe
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\bin\Debug\GSAdmin.pdb
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\bin\Debug\GSAdmin.xml
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\obj\Debug\GSAdmin.AddServer.resources
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\obj\Debug\GSAdmin.Form1.resources
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\obj\Debug\GSAdmin.Resources.resources
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\obj\Debug\GSAdmin.vbproj.GenerateResource.Cache
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\obj\Debug\GSAdmin.exe
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\obj\Debug\GSAdmin.xml
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\obj\Debug\GSAdmin.pdb
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\bin\Debug\TinyNET.dll
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdmin\bin\Debug\GameServerInfo.dll
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\bin\Debug\GSAdmin.exe.config
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.exe
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.xml
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.pdb
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\bin\Debug\GSAdmin.exe
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\bin\Debug\GSAdmin.pdb
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\bin\Debug\GSAdmin.xml
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\bin\Debug\GameServerInfo.dll
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\bin\Debug\GameServerInfo.xml
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.AddServer.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.Form1.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.Resources.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.vbproj.GenerateResource.Cache
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\bin\Debug\rcon.dll
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\bin\Debug\rcon.pdb
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.Kickban.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.custcmd.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.settings.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.RconStatus.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.UnBan.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.AboutBox1.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.BroadcastMessage.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.banlists.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\bin\Debug\GSAdmin.exe.manifest
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\bin\Debug\GSAdmin.application
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.exe.manifest
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdmin\GSAdmin\obj\Debug\GSAdmin.application
