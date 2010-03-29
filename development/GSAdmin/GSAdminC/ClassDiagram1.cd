@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GSAdminC.Form1" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYKABiBBsSEYCAAACCKCwLkC0ACEYAUhgAQwAIEAAEg=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GSAdminC.Functions">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAEQAAAAAAAAAAAEAARAICAAAAAAAE=</HashCode>
+      <FileName>Functions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GSAdminC.Program" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GSAdminC.RCON" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAgAggAAAA=</HashCode>
+      <FileName>rconclass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameServerInfo.GameServer" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQBCCAEABBAQIwBAAAAAAVAAAWoAAIBAICIRAAACAA=</HashCode>
+      <FileName>GameServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameServerInfo.Player" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIgAAAAAgAggAAEAAAAQABAAAAAAAEIAAAAIAAQA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameServerInfo.PlayerCollection" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAEAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>PlayerCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameServerInfo.Protocol" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAABCiAMABBAQMgRIAAAAIQAAhWogIoAAIGEYAIAiAA=</HashCode>
+      <FileName>Protocol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameServerInfo.Quake3" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAgAAAAAAAAAAACAAIQQAgAAIAAAAAAIAAAAIiQQ=</HashCode>
+      <FileName>Protocols\Quake3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GSAdminC.Properties.Resources" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GSAdminC.Properties.Settings">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCCAAAAAAAAQQAAAAAAIACgAAABEAAAAABAQABgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="GameServerInfo.GameType" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAyAIAACAAAhAAgBAAAgIAAA=</HashCode>
+      <FileName>GameType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameServerInfo.GameProtocol" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>GameType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameServerInfo.Quake3GameType" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAABAAAAAIAAACAAAAAAAAAgiAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Protocols\Quake3.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
