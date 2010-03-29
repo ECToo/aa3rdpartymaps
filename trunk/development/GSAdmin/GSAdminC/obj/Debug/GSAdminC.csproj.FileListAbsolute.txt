@@ -1,0 +1,23 @@
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdminC\bin\Debug\GSAdminC.exe
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdminC\bin\Debug\GSAdminC.pdb
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdminC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdminC\obj\Debug\GSAdminC.Form1.resources
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdminC\obj\Debug\GSAdminC.Properties.Resources.resources
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdminC\obj\Debug\GSAdminC.csproj.GenerateResource.Cache
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdminC\obj\Debug\GSAdminC.exe
+C:\Users\Davey\AppData\Local\Temporary Projects\GSAdminC\obj\Debug\GSAdminC.pdb
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\bin\Debug\GSAdminC.exe.config
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.exe
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.pdb
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.Form1.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.Properties.Resources.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.csproj.GenerateResource.Cache
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\bin\Debug\GSAdminC.exe
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\bin\Debug\GSAdminC.pdb
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.AddServer.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.rconResponse.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.kickBan.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.customCommand.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.unBan.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.programSettings.resources

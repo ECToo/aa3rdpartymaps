@@ -1,0 +1,5 @@
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.AddServer.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.Form1.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.Properties.Resources.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.csproj.GenerateResource.Cache
