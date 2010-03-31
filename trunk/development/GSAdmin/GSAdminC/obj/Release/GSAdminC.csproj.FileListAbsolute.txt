@@ -3,3 +3,15 @@ C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Relea
 C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.Form1.resources
 C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.Properties.Resources.resources
 C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.csproj.GenerateResource.Cache
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\bin\Release\GSAdminC.exe.config
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\bin\Release\GSAdminC.exe
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\bin\Release\GSAdminC.pdb
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.aboutBox.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.broadcastMessage.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.customCommand.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.kickBan.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.programSettings.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.rconResponse.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.unBan.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.exe
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.pdb

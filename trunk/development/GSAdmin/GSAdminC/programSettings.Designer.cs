@@ -31,8 +31,8 @@
             this.txtPlayer = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.chkBots = new System.Windows.Forms.CheckBox();
-            this.Button2 = new System.Windows.Forms.Button();
-            this.TextBox1 = new System.Windows.Forms.TextBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.txtLocation = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.chkJoin = new System.Windows.Forms.CheckBox();
             this.chkNotify = new System.Windows.Forms.CheckBox();
@@ -43,6 +43,7 @@
             this.chkStart = new System.Windows.Forms.CheckBox();
             this.OK_Button = new System.Windows.Forms.Button();
             this.Cancel_Button = new System.Windows.Forms.Button();
+            this.gameBrowse = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.numMin)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,22 +74,23 @@
             this.chkBots.Text = "Show bots in player list";
             this.chkBots.UseVisualStyleBackColor = true;
             // 
-            // Button2
+            // btnBrowse
             // 
-            this.Button2.Location = new System.Drawing.Point(340, 146);
-            this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(80, 23);
-            this.Button2.TabIndex = 24;
-            this.Button2.Text = "Browse";
-            this.Button2.UseVisualStyleBackColor = true;
+            this.btnBrowse.Location = new System.Drawing.Point(340, 146);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(80, 23);
+            this.btnBrowse.TabIndex = 24;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // TextBox1
+            // txtLocation
             // 
-            this.TextBox1.Location = new System.Drawing.Point(124, 148);
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.ReadOnly = true;
-            this.TextBox1.Size = new System.Drawing.Size(210, 20);
-            this.TextBox1.TabIndex = 23;
+            this.txtLocation.Location = new System.Drawing.Point(124, 148);
+            this.txtLocation.Name = "txtLocation";
+            this.txtLocation.ReadOnly = true;
+            this.txtLocation.Size = new System.Drawing.Size(210, 20);
+            this.txtLocation.TabIndex = 23;
             // 
             // Label1
             // 
@@ -108,6 +110,7 @@
             this.chkJoin.TabIndex = 21;
             this.chkJoin.Text = "Enable \"Join Game\" function";
             this.chkJoin.UseVisualStyleBackColor = true;
+            this.chkJoin.CheckedChanged += new System.EventHandler(this.chkJoin_CheckedChanged);
             // 
             // chkNotify
             // 
@@ -198,6 +201,10 @@
             this.Cancel_Button.TabIndex = 1;
             this.Cancel_Button.Text = "Cancel";
             // 
+            // gameBrowse
+            // 
+            this.gameBrowse.Description = "Location of Alien Arena";
+            // 
             // programSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,8 +215,8 @@
             this.Controls.Add(this.txtPlayer);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.chkBots);
-            this.Controls.Add(this.Button2);
-            this.Controls.Add(this.TextBox1);
+            this.Controls.Add(this.btnBrowse);
+            this.Controls.Add(this.txtLocation);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.chkJoin);
             this.Controls.Add(this.chkNotify);
@@ -219,7 +226,9 @@
             this.Controls.Add(this.chkAuto);
             this.Controls.Add(this.chkStart);
             this.Name = "programSettings";
+            this.ShowInTaskbar = false;
             this.Text = "programSettings";
+            this.Load += new System.EventHandler(this.programSettings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numMin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,8 +240,8 @@
         internal System.Windows.Forms.TextBox txtPlayer;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.CheckBox chkBots;
-        internal System.Windows.Forms.Button Button2;
-        internal System.Windows.Forms.TextBox TextBox1;
+        internal System.Windows.Forms.Button btnBrowse;
+        internal System.Windows.Forms.TextBox txtLocation;
         internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.CheckBox chkJoin;
         internal System.Windows.Forms.CheckBox chkNotify;
@@ -243,5 +252,6 @@
         internal System.Windows.Forms.CheckBox chkStart;
         internal System.Windows.Forms.Button OK_Button;
         internal System.Windows.Forms.Button Cancel_Button;
+        private System.Windows.Forms.FolderBrowserDialog gameBrowse;
     }
 }

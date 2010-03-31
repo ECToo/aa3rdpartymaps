@@ -20,6 +20,7 @@ namespace GSAdminC
         public string[,] serverinfo = new string[50, 7];
         public string[,] playerinfo = new string[50, 30];
         public int selIndex;
+        public bool notify = true;
 
         public Form1()
         {
@@ -32,13 +33,15 @@ namespace GSAdminC
             if (settings.autorefresh)
             {
                 refreshTmr.Enabled = true;
-                refreshTmr.Interval = settings.interval;
+                refreshTmr.Interval = settings.interval * 1000;
                 refreshTmr.Start();
+                statusRefresh.Text = "Enabled. Interval: " + Convert.ToString(settings.interval / 60) + " Minute(s)";
             }
             else
             {
                 refreshTmr.Enabled = false;
                 refreshTmr.Stop();
+                statusRefresh.Text = "Disabled";
             }
 
             if (settings.startup)
@@ -54,24 +57,23 @@ namespace GSAdminC
             {
                 JoinThisGameToolStripMenuItem.Enabled = false;
             }
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            checksettings();
-            
+            checksettings();      
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-                        
+            #region Initial refresh setup
+            lblStatus.Text = "Refreshing.. Please wait";            
             ListView1.Items.Clear();
             lstPlayers.Items.Clear();
             settings.Reload();
             Array.Clear(playerinfo, 0, playerinfo.Length);
             Array.Clear(serverinfo, 0, serverinfo.Length);
+            #endregion
             try
             {
                 if (settings.servers.Count == 0)
@@ -99,10 +101,14 @@ namespace GSAdminC
                     if (server.IsOnline)
                     {
                         // If server name has changed since initial insert, update record with new name.
+                        #region bugfix from old version for db server name
                         if (field[3] != GameServerInfo.GameServer.CleanName(server.Name))
                         {
                             settings.servers[counter] = field[0] + "^" + field[1] + "^" + field[2] + "^" + GameServerInfo.GameServer.CleanName(server.Name) + "^" + field[4];
                         }
+                        #endregion
+
+                        #region insert servers into listview
                         item[0] = field[0] + ":" + field[1];
                         item[1] = GameServerInfo.GameServer.CleanName(server.Name);
                         item[2] = server.Map;
@@ -115,9 +121,10 @@ namespace GSAdminC
                         ListView1.Items.Add(itm);
                         ListView1.Items[counter].ForeColor = Color.Black;
                         ListView1.Items[counter].BackColor = Color.White;
+                        #endregion
                         
+                        #region insert players into array
                         int i = 0;
-
                         if (server.NumPlayers != 0)
                         {
                             while (i < server.NumPlayers)
@@ -139,8 +146,10 @@ namespace GSAdminC
                                 i++;
                             }
                         }
-                        
+                        #endregion
+
                         // Finally, let's parse the server info vars.
+                        #region insert server vars into array
                         serverinfo[counter, 0] = server.version;
                         serverinfo[counter, 1] = server.timelimit;
                         serverinfo[counter, 2] = server.fraglimit;
@@ -149,10 +158,12 @@ namespace GSAdminC
                         serverinfo[counter, 5] = server.reward;
                         serverinfo[counter, 6] = Convert.ToString(server.MaxPlayers);
                         counter++;
+                        #endregion
                     }
                     else
                     {
                         //Server Is Offline.
+                        #region offline server handling
                         item[0] = field[0] + ":" + field[1];
                         item[1] = GameServerInfo.GameServer.CleanName(field[3]);
                         item[2] = "Server Offline";
@@ -166,9 +177,10 @@ namespace GSAdminC
                         ListView1.Items[counter].BackColor = Color.Red;
                         counter++;
                         offline++;
+                        #endregion
                     }
-                    
                 }
+                #region listview enabling
                 if (ListView1.Items.Count > 0)
                 {
                     ListView1.Enabled = true;
@@ -183,14 +195,20 @@ namespace GSAdminC
                     Button3.Enabled = false;
                     Button6.Enabled = true;
                 }
-
-
+                #endregion
+                lblStatus.Text = "Ready..";
+                if (notify && offline > 0)
+                {
+                    NotifyIcon1.BalloonTipTitle = Convert.ToString(offline) + " servers offline";
+                    NotifyIcon1.BalloonTipText = "There are currently " + Convert.ToString(offline) + " servers offline. Click here to hide this message for the rest of the session.";
+                    NotifyIcon1.ShowBalloonTip(5000);
+                }
             }
             catch(Exception ex)
             {
                 func.exceptionbox(ex.Message);
-            }
-      
+                lblStatus.Text = "An error occured..";
+            }   
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -235,6 +253,7 @@ namespace GSAdminC
             }
 
             // Insert the server information from the array.
+            #region serverInsert
             lstSvrInfo.Items.Clear();
             string[] key = new string[2];
             string antilagged = null;
@@ -282,8 +301,9 @@ namespace GSAdminC
             key[1] = serverinfo[selIndex, 6];
             keys = new ListViewItem(key);
             lstSvrInfo.Items.Add(keys);
-
+            #endregion
             // Insert the players from the array, into the player list.
+            #region playerInsert
             lstPlayers.Items.Clear();
             if (playerinfo[selIndex, 0] != null)
             {
@@ -303,7 +323,7 @@ namespace GSAdminC
                     i++;
                 }
             }
-            
+            #endregion
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -324,25 +344,7 @@ namespace GSAdminC
 
         private void ListView1_MouseDown(object sender, MouseEventArgs e)
         {
-            //try
-            //{
-            //    selIndex = this.ListView1.FocusedItem.Index;
-            //}
-            //catch
-            //{
-            //}
-
-            //if (e.Button == MouseButtons.Right)
-            //{
-               
-            //   selIndex = this.ListView1.FocusedItem.Index;
-            //    if (Convert.ToString(ListView1.Items[selIndex].SubItems[4].Text) !="000")
-            //    {
-            //        cmdServerTitle.Text = Convert.ToString(ListView1.Items[selIndex].SubItems[1].Text);
-            //        svrCmdSend.Show(ListView1, e.Location);
-            //    }
-            //}
-                
+                            
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -577,6 +579,54 @@ namespace GSAdminC
             unban.serverinfo(cmdServerTitle.Text, record[0], Convert.ToInt32(record[1]), record[2]);
             unban.ShowDialog();
             unban.Dispose();
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            programSettings settingsfrm = new programSettings();
+            settingsfrm.ShowDialog();
+            checksettings();
+        }
+
+        private void refreshTmr_Tick(object sender, EventArgs e)
+        {
+            lblStatus.Text = "Refreshing.. Please wait.";
+            btnRefresh.PerformClick();
+            lblStatus.Text = "Ready..";
+        }
+
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void JoinThisGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string[] record = settings.servers[selIndex].Split('^');
+                Process StartGame = new Process();
+                StartGame.StartInfo.WorkingDirectory = settings.aalocation;
+                StartGame.StartInfo.FileName = settings.aalocation + "\\crx.exe";
+                StartGame.StartInfo.Arguments = "+set game arena +set name " + settings.playername + " +connect " + record[0] + ":" + record[1];
+                StartGame.Start();
+            }
+            catch(Exception ex)
+            {
+                func.exceptionbox(ex.Message);
+            }
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            aboutBox about = new aboutBox();
+            about.ShowDialog();
+        }
+
+        private void NotifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+        {
+            notify = false;
+
         }
 
     }

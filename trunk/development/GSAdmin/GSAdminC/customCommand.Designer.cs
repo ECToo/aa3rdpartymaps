@@ -121,6 +121,7 @@
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "customCommand";
+            this.ShowInTaskbar = false;
             this.Text = "Custom Command.";
             this.Load += new System.EventHandler(this.customCommand_Load);
             this.ResumeLayout(false);
