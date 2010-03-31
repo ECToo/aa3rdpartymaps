@@ -16,9 +16,13 @@ namespace GSAdminC
         public bool settingsexist()
         {
             if (Properties.Settings.Default.firstrun == false)
+            {
                 return false;
+            }
             else
+            {
                 return true;
+            }
         }
 
         /// <summary>

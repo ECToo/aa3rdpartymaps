@@ -66,11 +66,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutBox.Designer.cs">
+      <DependentUpon>aboutBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddServer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddServer.Designer.cs">
       <DependentUpon>AddServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="broadcastMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="broadcastMessage.Designer.cs">
+      <DependentUpon>broadcastMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="customCommand.cs">
       <SubType>Form</SubType>
@@ -103,8 +115,16 @@
       <DependentUpon>programSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="aboutBox.resx">
+      <DependentUpon>aboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddServer.resx">
       <DependentUpon>AddServer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="broadcastMessage.resx">
+      <DependentUpon>broadcastMessage.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="customCommand.resx">
@@ -138,6 +158,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
@@ -187,6 +208,15 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3pm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aalogobig.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gsadmin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

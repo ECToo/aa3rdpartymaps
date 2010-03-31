@@ -112,6 +112,7 @@
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "unBan";
+            this.ShowInTaskbar = false;
             this.Text = "Unban an IP address";
             this.Load += new System.EventHandler(this.unBan_Load);
             this.ResumeLayout(false);

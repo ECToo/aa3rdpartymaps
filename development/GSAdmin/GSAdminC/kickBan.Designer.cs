@@ -145,6 +145,7 @@
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "kickBan";
+            this.ShowInTaskbar = false;
             this.Text = "Kick & Ban Control.";
             this.Load += new System.EventHandler(this.kickBan_Load);
             this.ResumeLayout(false);

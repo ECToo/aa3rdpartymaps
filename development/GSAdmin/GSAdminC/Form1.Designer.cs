@@ -85,6 +85,8 @@
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.svrRefreshWorker = new System.ComponentModel.BackgroundWorker();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusRefresh = new System.Windows.Forms.ToolStripStatusLabel();
             this.svrCmdSend.SuspendLayout();
             this.cxtIcon.SuspendLayout();
             this.GroupBox1.SuspendLayout();
@@ -155,7 +157,7 @@
             this.ToolStripSeparator1,
             this.CustomCommandToolStripMenuItem});
             this.svrCmdSend.Name = "svrCmdSend";
-            this.svrCmdSend.Size = new System.Drawing.Size(177, 302);
+            this.svrCmdSend.Size = new System.Drawing.Size(177, 280);
             // 
             // cmdServerTitle
             // 
@@ -175,6 +177,7 @@
             this.JoinThisGameToolStripMenuItem.Name = "JoinThisGameToolStripMenuItem";
             this.JoinThisGameToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.JoinThisGameToolStripMenuItem.Text = "Join this game";
+            this.JoinThisGameToolStripMenuItem.Click += new System.EventHandler(this.JoinThisGameToolStripMenuItem_Click);
             // 
             // SayToolStripMenuItem
             // 
@@ -352,6 +355,7 @@
             this.NotifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon1.Icon")));
             this.NotifyIcon1.Text = "GSAdmin";
             this.NotifyIcon1.Visible = true;
+            this.NotifyIcon1.BalloonTipClicked += new System.EventHandler(this.NotifyIcon1_BalloonTipClicked);
             // 
             // cxtIcon
             // 
@@ -369,6 +373,7 @@
             // refreshTmr
             // 
             this.refreshTmr.Interval = 60000;
+            this.refreshTmr.Tick += new System.EventHandler(this.refreshTmr_Tick);
             // 
             // Button5
             // 
@@ -378,6 +383,7 @@
             this.Button5.TabIndex = 23;
             this.Button5.Text = "About";
             this.Button5.UseVisualStyleBackColor = true;
+            this.Button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // lstPlayers
             // 
@@ -463,6 +469,7 @@
             this.Button4.TabIndex = 8;
             this.Button4.Text = "Program Settings";
             this.Button4.UseVisualStyleBackColor = true;
+            this.Button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // Button2
             // 
@@ -502,10 +509,14 @@
             // 
             this.StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripStatusLabel1,
-            this.lblStatus});
+            this.lblStatus,
+            this.toolStripStatusLabel2,
+            this.statusRefresh});
             this.StatusBar.Location = new System.Drawing.Point(0, 387);
             this.StatusBar.Name = "StatusBar";
             this.StatusBar.Size = new System.Drawing.Size(671, 22);
+            this.StatusBar.SizingGrip = false;
+            this.StatusBar.Stretch = false;
             this.StatusBar.TabIndex = 20;
             this.StatusBar.Text = "Status:";
             // 
@@ -532,6 +543,20 @@
             this.svrRefreshWorker.WorkerReportsProgress = true;
             this.svrRefreshWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(75, 17);
+            this.toolStripStatusLabel2.Text = "AutoRefresh:";
+            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
+            // 
+            // statusRefresh
+            // 
+            this.statusRefresh.Enabled = false;
+            this.statusRefresh.Name = "statusRefresh";
+            this.statusRefresh.Size = new System.Drawing.Size(41, 17);
+            this.statusRefresh.Text = "STATE";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,8 +573,9 @@
             this.Controls.Add(this.StatusBar);
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.Label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "GSAdmin 0.8 BETA";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Form1_Click);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -620,6 +646,8 @@
         private System.ComponentModel.BackgroundWorker svrRefreshWorker;
         private System.Windows.Forms.ToolStripMenuItem cmdServerTitle;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel statusRefresh;
     }
 }
 
