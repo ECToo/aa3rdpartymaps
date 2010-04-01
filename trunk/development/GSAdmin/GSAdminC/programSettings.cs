@@ -80,9 +80,15 @@ namespace GSAdminC
                     }
                     else
                     {
+                        if (!func.validateText(txtPlayer.Text))
+                        {
+                            throw new Exception("To enable join game, you must insert a player name");
+                        }
+                       
+                        settings.playername = txtPlayer.Text;
                         settings.enablejoin = true;
                         settings.aalocation = txtLocation.Text;
-                        settings.playername = txtPlayer.Text;
+                        
                     }
                 }
                 else
@@ -129,7 +135,7 @@ namespace GSAdminC
             }
 
             if(settings.notify){
-                chkMinimize.Checked = true;
+                chkNotify.Checked = true;
             }
 
             if (settings.showbots)
@@ -204,6 +210,21 @@ namespace GSAdminC
             else
             {
                 btnBrowse.Enabled = false;
+            }
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            DialogResult response = new DialogResult();
+
+            response = MessageBox.Show("This will delete all settings, and servers. Are you sure you want to continue?","Question.",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if (response == DialogResult.Yes)
+            {
+                settings.Reset();
+                settings.Save();
+                settings.Reload();
+                this.Dispose();
             }
         }
     }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace GSAdminC
 {
     public partial class aboutBox : Form
@@ -19,6 +20,16 @@ namespace GSAdminC
         private void Button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://aa3rdpartymaps.googlecode.com");            
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.arenawiki.com/GSAdmin");
         }
     }
 }

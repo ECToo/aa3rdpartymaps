@@ -47,7 +47,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="ObjectListView, Version=2.3.0.41756, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -151,6 +150,10 @@
       <DependentUpon>rconResponse.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="splashScreen.resx">
+      <DependentUpon>splashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="unBan.resx">
       <DependentUpon>unBan.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -179,6 +182,12 @@
     </Compile>
     <Compile Include="rconResponse.Designer.cs">
       <DependentUpon>rconResponse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splashScreen.Designer.cs">
+      <DependentUpon>splashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="unBan.cs">
       <SubType>Form</SubType>
@@ -217,6 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gsadmin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GSAdminSplash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

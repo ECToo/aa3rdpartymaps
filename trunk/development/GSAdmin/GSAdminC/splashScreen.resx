@@ -117,14 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Programmed By: Dave Carter
-Programming Consult: Dave Stewart
-
-Special Thanks to the Testing Team:
-[T3]Blindman, [VP]Xenos, [T3]Sinn,
-[SiN]Emp, [VP]Nixon, [VP]Rifleman
-
-SVN updates provided at the link below.</value>
-  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

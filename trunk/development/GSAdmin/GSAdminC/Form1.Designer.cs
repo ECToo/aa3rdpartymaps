@@ -60,7 +60,6 @@
             this.Button6 = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
-            this.Panel1 = new System.Windows.Forms.Panel();
             this.Label4 = new System.Windows.Forms.Label();
             this.NotifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.cxtIcon = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -82,11 +81,11 @@
             this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.StatusBar = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusRefresh = new System.Windows.Forms.ToolStripStatusLabel();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.svrRefreshWorker = new System.ComponentModel.BackgroundWorker();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusRefresh = new System.Windows.Forms.ToolStripStatusLabel();
             this.svrCmdSend.SuspendLayout();
             this.cxtIcon.SuspendLayout();
             this.GroupBox1.SuspendLayout();
@@ -311,6 +310,7 @@
             this.Button6.TabIndex = 11;
             this.Button6.Text = "Broadcast Message";
             this.Button6.UseVisualStyleBackColor = true;
+            this.Button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // btnRefresh
             // 
@@ -333,13 +333,6 @@
             this.Button3.UseVisualStyleBackColor = true;
             this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // Panel1
-            // 
-            this.Panel1.Location = new System.Drawing.Point(83, 4);
-            this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(346, 13);
-            this.Panel1.TabIndex = 24;
-            // 
             // Label4
             // 
             this.Label4.AutoSize = true;
@@ -354,8 +347,8 @@
             this.NotifyIcon1.ContextMenuStrip = this.cxtIcon;
             this.NotifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon1.Icon")));
             this.NotifyIcon1.Text = "GSAdmin";
-            this.NotifyIcon1.Visible = true;
             this.NotifyIcon1.BalloonTipClicked += new System.EventHandler(this.NotifyIcon1_BalloonTipClicked);
+            this.NotifyIcon1.DoubleClick += new System.EventHandler(this.NotifyIcon1_DoubleClick);
             // 
             // cxtIcon
             // 
@@ -369,6 +362,7 @@
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
             this.ExitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.ExitToolStripMenuItem.Text = "Exit";
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // refreshTmr
             // 
@@ -520,6 +514,20 @@
             this.StatusBar.TabIndex = 20;
             this.StatusBar.Text = "Status:";
             // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(75, 17);
+            this.toolStripStatusLabel2.Text = "AutoRefresh:";
+            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
+            // 
+            // statusRefresh
+            // 
+            this.statusRefresh.Enabled = false;
+            this.statusRefresh.Name = "statusRefresh";
+            this.statusRefresh.Size = new System.Drawing.Size(41, 17);
+            this.statusRefresh.Text = "STATE";
+            // 
             // Label3
             // 
             this.Label3.AutoSize = true;
@@ -543,27 +551,12 @@
             this.svrRefreshWorker.WorkerReportsProgress = true;
             this.svrRefreshWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(75, 17);
-            this.toolStripStatusLabel2.Text = "AutoRefresh:";
-            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
-            // 
-            // statusRefresh
-            // 
-            this.statusRefresh.Enabled = false;
-            this.statusRefresh.Name = "statusRefresh";
-            this.statusRefresh.Size = new System.Drawing.Size(41, 17);
-            this.statusRefresh.Text = "STATE";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 409);
             this.Controls.Add(this.ListView1);
-            this.Controls.Add(this.Panel1);
             this.Controls.Add(this.Label4);
             this.Controls.Add(this.Button5);
             this.Controls.Add(this.lstPlayers);
@@ -573,9 +566,11 @@
             this.Controls.Add(this.StatusBar);
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.Label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "GSAdmin 0.8 BETA";
+            this.Text = "GSAdmin 0.9b STABLE - By 3PM";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Form1_Click);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -612,7 +607,6 @@
         internal System.Windows.Forms.ToolStripMenuItem AntilagToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem OnToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem OffToolStripMenuItem;
-        internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.NotifyIcon NotifyIcon1;
         internal System.Windows.Forms.ContextMenuStrip cxtIcon;

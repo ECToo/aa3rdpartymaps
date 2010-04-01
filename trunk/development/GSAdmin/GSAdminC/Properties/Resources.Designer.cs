@@ -80,5 +80,12 @@ namespace GSAdminC.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap GSAdminSplash {
+            get {
+                object obj = ResourceManager.GetObject("GSAdminSplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -140,6 +140,7 @@
             this.Button1.TabIndex = 18;
             this.Button1.Text = "Delete Settings";
             this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // numMin
             // 
@@ -227,7 +228,7 @@
             this.Controls.Add(this.chkStart);
             this.Name = "programSettings";
             this.ShowInTaskbar = false;
-            this.Text = "programSettings";
+            this.Text = "GSAdmin Settings";
             this.Load += new System.EventHandler(this.programSettings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numMin)).EndInit();
             this.ResumeLayout(false);

@@ -127,4 +127,7 @@
   <data name="_3pm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3pm.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GSAdminSplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GSAdminSplash.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
