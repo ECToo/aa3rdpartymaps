@@ -23,17 +23,12 @@ namespace GSAdminC
         {
             try
             {
-                if (settings.servers.Count == 0)
-                {
-                    throw new Exception("You have no servers defined. You must add a server before you can use this function.");
-                }
-
-                int offline = 0;
                 int records = settings.servers.Count;
                 int counter = 0;
                 string record;
                 string[] field;
-                
+                chkList.Items.Clear();
+
                 while (counter < records)
                 {
                     record = settings.servers[counter];
@@ -42,16 +37,13 @@ namespace GSAdminC
                    
                     server.QueryServer();
                     
-
-                    string[] item = new string[5];
-
                     if (server.IsOnline)
                     {                  
-                        
-                    }
-                    
-                       
+                    chkList.Items.Add(GameServerInfo.GameServer.CleanName(server.Name));
+                    }                    
+                    counter++;   
                 }
+
                 #region listview enabling
                 if (chkList.Items.Count > 0)
                 {
@@ -73,9 +65,79 @@ namespace GSAdminC
             }
             catch (Exception ex)
             {
-                func.exceptionbox(ex.Message);
-                
+                func.exceptionbox(ex.Message);  
             }   
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < chkList.Items.Count; i++)
+            {
+                chkList.SetItemChecked(i, true);
+            }  
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < chkList.Items.Count; i++)
+            {
+                chkList.SetItemChecked(i, false);
+            }
+        }
+
+        private void Cancel_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OK_Button_Click(object sender, EventArgs e)
+        {
+            if (chkList.CheckedItems.Count == 0)
+            {
+                throw new Exception("You must select at least one server to broadcast to. Alternatively, click close");
+            }
+            int i = 0;
+            string search;
+            string[] field;
+            int online = 0;
+            int offline = 0;
+            string response;
+            foreach (string item in chkList.CheckedItems)
+            {
+                i = 0;
+                while (i < settings.servers.Count)
+                {
+                    search = settings.servers[i];
+                    if (search.Contains(item))
+                    {
+                        RCON rcon = new RCON();
+                        field = search.Split('^');
+                        rcon.initServer(field[0], Convert.ToInt32(field[1]), field[2]);
+                        response = rcon.sendCommand("say " + TextBox1.Text);
+                        if (func.cmdValid(response))
+                        {
+                            online++;
+                        }
+                        else
+                        {
+                            offline++;
+                        }
+                        i++;
+                    }else{
+                        i++;
+                    }
+
+                }
+            }
+            if (offline != 0)
+            {
+                func.successbox("Message sent to " + Convert.ToString(online) + " of " + Convert.ToString(chkList.CheckedItems.Count) + " servers. " + Environment.NewLine + Convert.ToString(offline) + " server(s) reported errors. Please check your rcon passwords, and ensure the servers are online.");
+            }
+            else
+            {
+                func.successbox("Message broadcast to " + Convert.ToString(online) + " servers.");
+            }
+
         }
     }
 }

@@ -35,7 +35,7 @@ namespace GSAdminC
 
             int records = 0; // Holds number of server records.
             string record; // Record holder.
-            int i = 1; //Counter
+            int i = 0; //Counter
             try
             {
                 if(!func.validateText(txtIP.Text))

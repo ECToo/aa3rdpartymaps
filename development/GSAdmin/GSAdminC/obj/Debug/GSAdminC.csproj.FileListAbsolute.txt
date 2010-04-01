@@ -23,3 +23,4 @@ C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug
 C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.programSettings.resources
 C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.aboutBox.resources
 C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.broadcastMessage.resources
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Debug\GSAdminC.splashScreen.resources

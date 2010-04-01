@@ -123,7 +123,7 @@ namespace GSAdminC.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool showbots {
             get {
                 return ((bool)(this["showbots"]));
@@ -159,13 +159,13 @@ namespace GSAdminC.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool Setting {
+        [global::System.Configuration.DefaultSettingValueAttribute("1.0.0.0")]
+        public string ApplicationVersion {
             get {
-                return ((bool)(this["Setting"]));
+                return ((string)(this["ApplicationVersion"]));
             }
             set {
-                this["Setting"] = value;
+                this["ApplicationVersion"] = value;
             }
         }
     }

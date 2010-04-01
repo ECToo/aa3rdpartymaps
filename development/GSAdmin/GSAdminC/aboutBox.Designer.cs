@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aboutBox));
             this.LinkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             this.Label2 = new System.Windows.Forms.Label();
             this.Button1 = new System.Windows.Forms.Button();
             this.Label1 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
@@ -43,23 +45,22 @@
             // 
             // LinkLabel1
             // 
-            this.LinkLabel1.Location = new System.Drawing.Point(0, 417);
+            this.LinkLabel1.Location = new System.Drawing.Point(0, 408);
             this.LinkLabel1.Name = "LinkLabel1";
             this.LinkLabel1.Size = new System.Drawing.Size(403, 17);
             this.LinkLabel1.TabIndex = 17;
             this.LinkLabel1.TabStop = true;
-            this.LinkLabel1.Text = "Found a bug? Need help? Visit http://aa3rdpartymaps.googlecode.com";
+            this.LinkLabel1.Text = "Found a bug? Want Updates? Visit http://aa3rdpartymaps.googlecode.com";
             this.LinkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
             // Label5
             // 
-            this.Label5.Location = new System.Drawing.Point(1, 278);
+            this.Label5.Location = new System.Drawing.Point(1, 265);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(395, 100);
+            this.Label5.Size = new System.Drawing.Size(395, 112);
             this.Label5.TabIndex = 15;
-            this.Label5.Text = "Programmed By: Dave Carter\r\nProgramming Consult: Dave Stewart\r\n\r\nSpecial Thanks t" +
-                "o the Testing Team:\r\n[T3]Blindman, [VP]Xenos, [T3]Sinn\r\n\r\nSVN updates provided a" +
-                "t the link below.";
+            this.Label5.Text = resources.GetString("Label5.Text");
             // 
             // Label4
             // 
@@ -85,9 +86,9 @@
             this.Label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Location = new System.Drawing.Point(-2, 5);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(166, 19);
+            this.Label2.Size = new System.Drawing.Size(197, 19);
             this.Label2.TabIndex = 11;
-            this.Label2.Text = "GS Admin v0.8 BETA";
+            this.Label2.Text = "GS Admin v0.9b STABLE";
             // 
             // Button1
             // 
@@ -110,6 +111,17 @@
                 "isk, 3PM will not be held responsible for loss or damage to files, or settings b" +
                 "oth locally and remotely.";
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.Location = new System.Drawing.Point(0, 433);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(403, 17);
+            this.linkLabel2.TabIndex = 18;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Need Help? Visit http://www.arenawiki.com/GSAdmin";
+            this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
             // PictureBox2
             // 
             this.PictureBox2.Image = global::GSAdminC.Properties.Resources._3pm;
@@ -123,9 +135,9 @@
             // PictureBox1
             // 
             this.PictureBox1.Image = global::GSAdminC.Properties.Resources.aalogobig;
-            this.PictureBox1.Location = new System.Drawing.Point(0, 45);
+            this.PictureBox1.Location = new System.Drawing.Point(-3, 45);
             this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(403, 200);
+            this.PictureBox1.Size = new System.Drawing.Size(410, 200);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox1.TabIndex = 13;
             this.PictureBox1.TabStop = false;
@@ -135,7 +147,8 @@
             this.AcceptButton = this.Button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 439);
+            this.ClientSize = new System.Drawing.Size(404, 456);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.LinkLabel1);
             this.Controls.Add(this.PictureBox2);
             this.Controls.Add(this.Label5);
@@ -167,5 +180,6 @@
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Button Button1;
         internal System.Windows.Forms.Label Label1;
+        internal System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

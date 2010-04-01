@@ -45,6 +45,7 @@
             this.Button2.TabIndex = 8;
             this.Button2.Text = "Deselect All";
             this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Button1
             // 
@@ -54,6 +55,7 @@
             this.Button1.TabIndex = 7;
             this.Button1.Text = "Select All";
             this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Label1
             // 
@@ -80,6 +82,7 @@
             this.OK_Button.Size = new System.Drawing.Size(72, 26);
             this.OK_Button.TabIndex = 4;
             this.OK_Button.Text = "Send";
+            this.OK_Button.Click += new System.EventHandler(this.OK_Button_Click);
             // 
             // chkList
             // 
@@ -98,6 +101,7 @@
             this.Cancel_Button.Size = new System.Drawing.Size(72, 26);
             this.Cancel_Button.TabIndex = 5;
             this.Cancel_Button.Text = "Close";
+            this.Cancel_Button.Click += new System.EventHandler(this.Cancel_Button_Click);
             // 
             // broadcastMessage
             // 
@@ -113,7 +117,8 @@
             this.Controls.Add(this.chkList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "broadcastMessage";
-            this.Text = "broadcastMessage";
+            this.ShowInTaskbar = false;
+            this.Text = "Broadcast Message";
             this.Load += new System.EventHandler(this.broadcastMessage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -21,6 +21,7 @@ namespace GSAdminC
         public string[,] playerinfo = new string[50, 30];
         public int selIndex;
         public bool notify = true;
+        public bool cxtExit = false;
 
         public Form1()
         {
@@ -49,19 +50,41 @@ namespace GSAdminC
                 btnRefresh.PerformClick();
             }
 
-            if (settings.enablejoin)
+            if (settings.servers[0] == "null")
             {
-                JoinThisGameToolStripMenuItem.Enabled = true;
+                
+                Button2.Enabled = false;
+                Button3.Enabled = false;
+                Button6.Enabled = false;
+                ListView1.Enabled = false;
+            }else{
+                
+                Button2.Enabled = true;
+                Button3.Enabled = true;
+                Button6.Enabled = true;
+                
             }
-            else
-            {
-                JoinThisGameToolStripMenuItem.Enabled = false;
-            }
+
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            checksettings();      
+            splashScreen splash = new splashScreen();
+            splash.StartPosition = FormStartPosition.CenterScreen;
+            splash.ShowDialog();
+            System.Reflection.Assembly a = System.Reflection.Assembly.GetExecutingAssembly();
+            Version appVersion = a.GetName().Version;
+            string appVersionString = appVersion.ToString();
+
+            if (Properties.Settings.Default.ApplicationVersion != appVersion.ToString())
+            {
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.ApplicationVersion = appVersionString;
+            }
+            
+            checksettings();
+
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -76,7 +99,7 @@ namespace GSAdminC
             #endregion
             try
             {
-                if (settings.servers.Count == 0)
+                if (settings.servers[0] == "null")
                 {
                     throw new Exception("You have no servers defined. You must add a server before you can use this function.");
                 }
@@ -131,10 +154,8 @@ namespace GSAdminC
                             {
                                 if (settings.showbots)
                                 {
-                                    if (server.Players[i].Ping == 0)
-                                    {
                                         playerinfo[counter, i] = Convert.ToString(server.Players[i].Ping) + "^" + GameServerInfo.GameServer.CleanName(server.Players[i].Name) + "^" + server.Players[i].Score;
-                                    }
+                                    
                                 }
                                 else
                                 {
@@ -197,7 +218,7 @@ namespace GSAdminC
                 }
                 #endregion
                 lblStatus.Text = "Ready..";
-                if (notify && offline > 0)
+                if (notify && offline > 0 && settings.notify == true)
                 {
                     NotifyIcon1.BalloonTipTitle = Convert.ToString(offline) + " servers offline";
                     NotifyIcon1.BalloonTipText = "There are currently " + Convert.ToString(offline) + " servers offline. Click here to hide this message for the rest of the session.";
@@ -221,6 +242,7 @@ namespace GSAdminC
             {
                 addsvr.Dispose();
                 checksettings();
+                btnRefresh.PerformClick();
             }
             else
             {
@@ -235,100 +257,114 @@ namespace GSAdminC
             try
             {
                 selIndex = this.ListView1.FocusedItem.Index;
+            
+                int i = 0;
+
+                if (Convert.ToString(ListView1.Items[selIndex].SubItems[4].Text) != "000")
+                {
+                    svrCmdSend.Enabled = true;
+                    cmdServerTitle.Text = Convert.ToString(ListView1.Items[selIndex].SubItems[1].Text);
+                }
+                else
+                {
+                    cmdServerTitle.Text = Convert.ToString(ListView1.Items[selIndex].SubItems[1].Text) + " (Offline)";
+                    svrCmdSend.Enabled = false;
+                }
+
+                // Insert the server information from the array.
+                #region serverInsert
+                lstSvrInfo.Items.Clear();
+                string[] key = new string[2];
+                string antilagged = null;
+                if (serverinfo[selIndex, 4] == "1")
+                {
+                    antilagged = "Yes";
+                }
+                else
+                {
+                    antilagged = "No";
+                }
+
+                ListViewItem keys;
+                key[0] = "Version";
+                key[1] = serverinfo[selIndex, 0];
+                keys = new ListViewItem(key);
+                lstSvrInfo.Items.Add(keys);
+
+                key[0] = "Timelimit";
+                key[1] = serverinfo[selIndex, 1];
+                keys = new ListViewItem(key);
+                lstSvrInfo.Items.Add(keys);
+
+                key[0] = "Fraglimit";
+                key[1] = serverinfo[selIndex, 2];
+                keys = new ListViewItem(key);
+                lstSvrInfo.Items.Add(keys);
+
+                key[0] = "Admin";
+                key[1] = serverinfo[selIndex, 3];
+                keys = new ListViewItem(key);
+                lstSvrInfo.Items.Add(keys);
+
+                key[0] = "Antilag";
+                key[1] = antilagged;
+                keys = new ListViewItem(key);
+                lstSvrInfo.Items.Add(keys);
+
+                key[0] = "Rewards";
+                key[1] = serverinfo[selIndex, 5];
+                keys = new ListViewItem(key);
+                lstSvrInfo.Items.Add(keys);
+
+                key[0] = "Max Players";
+                key[1] = serverinfo[selIndex, 6];
+                keys = new ListViewItem(key);
+                lstSvrInfo.Items.Add(keys);
+                #endregion
+                // Insert the players from the array, into the player list.
+                #region playerInsert
+                lstPlayers.Items.Clear();
+                if (playerinfo[selIndex, 0] != null)
+                {
+                    foreach (char item in playerinfo[selIndex, i])
+                    {
+                        string records = playerinfo[selIndex, i];
+                        string[] record = records.Split('^');
+                        string[] plr = new string[3];
+
+                        plr[0] = record[1];
+                        plr[1] = record[2];
+                        plr[2] = record[0];
+
+                        ListViewItem itm;
+                        itm = new ListViewItem(plr);
+                        lstPlayers.Items.Add(itm);
+                        i++;
+                    }
+                }
+                #endregion
             }
             catch
             {
             }
-            int i = 0;
-
-            if (Convert.ToString(ListView1.Items[selIndex].SubItems[4].Text) != "000")
-            {
-                svrCmdSend.Enabled = true;
-                cmdServerTitle.Text = Convert.ToString(ListView1.Items[selIndex].SubItems[1].Text);
-            }
-            else
-            {
-                cmdServerTitle.Text = Convert.ToString(ListView1.Items[selIndex].SubItems[1].Text) + " (Offline)";
-                svrCmdSend.Enabled = false;
-            }
-
-            // Insert the server information from the array.
-            #region serverInsert
-            lstSvrInfo.Items.Clear();
-            string[] key = new string[2];
-            string antilagged = null;
-            if (serverinfo[selIndex, 4] == "1")
-            {
-                antilagged = "Yes";
-            }
-            else
-            {
-                antilagged = "No";
-            }
-
-            ListViewItem keys;
-            key[0] = "Version";
-            key[1] = serverinfo[selIndex, 0];
-            keys = new ListViewItem(key);
-            lstSvrInfo.Items.Add(keys);
-
-            key[0] = "Timelimit";
-            key[1] = serverinfo[selIndex, 1];
-            keys = new ListViewItem(key);
-            lstSvrInfo.Items.Add(keys);
-
-            key[0] = "Fraglimit";
-            key[1] = serverinfo[selIndex, 2];
-            keys = new ListViewItem(key);
-            lstSvrInfo.Items.Add(keys);
-
-            key[0] = "Admin";
-            key[1] = serverinfo[selIndex, 3];
-            keys = new ListViewItem(key);
-            lstSvrInfo.Items.Add(keys);
-
-            key[0] = "Antilag";
-            key[1] = antilagged;
-            keys = new ListViewItem(key);
-            lstSvrInfo.Items.Add(keys);
-
-            key[0] = "Rewards";
-            key[1] = serverinfo[selIndex, 5];
-            keys = new ListViewItem(key);
-            lstSvrInfo.Items.Add(keys);
-
-            key[0] = "Max Players";
-            key[1] = serverinfo[selIndex, 6];
-            keys = new ListViewItem(key);
-            lstSvrInfo.Items.Add(keys);
-            #endregion
-            // Insert the players from the array, into the player list.
-            #region playerInsert
-            lstPlayers.Items.Clear();
-            if (playerinfo[selIndex, 0] != null)
-            {
-                foreach (char item in playerinfo[selIndex, i])
-                {
-                    string records = playerinfo[selIndex, i];
-                    string[] record = records.Split('^');
-                    string[] plr = new string[3];
-
-                    plr[0] = record[1];
-                    plr[1] = record[2];
-                    plr[2] = record[0];
-
-                    ListViewItem itm;
-                    itm = new ListViewItem(plr);
-                    lstPlayers.Items.Add(itm);
-                    i++;
-                }
-            }
-            #endregion
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             settings.Save();
+            if (settings.minimize == false || cxtExit == true)
+            {
+                e.Cancel = false;
+            }
+            else
+            {
+                this.Hide();
+                e.Cancel = true;
+                NotifyIcon1.Visible = true;
+                NotifyIcon1.BalloonTipTitle = "Information";
+                NotifyIcon1.BalloonTipText = "GSAdmin is still running. To exit, right click this icon and choose \"Exit\". This can be changed in the program settings menu.";
+                NotifyIcon1.ShowBalloonTip(8000);
+            }
 
         }
 
@@ -586,6 +622,8 @@ namespace GSAdminC
             programSettings settingsfrm = new programSettings();
             settingsfrm.ShowDialog();
             checksettings();
+            btnRefresh.PerformClick();
+            
         }
 
         private void refreshTmr_Tick(object sender, EventArgs e)
@@ -602,8 +640,14 @@ namespace GSAdminC
 
         private void JoinThisGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             try
             {
+                
+                if (settings.enablejoin == false)
+                {
+                    throw new Exception("You must enable this feature in program settings before you can use it");
+                }
                 string[] record = settings.servers[selIndex].Split('^');
                 Process StartGame = new Process();
                 StartGame.StartInfo.WorkingDirectory = settings.aalocation;
@@ -627,6 +671,36 @@ namespace GSAdminC
         {
             notify = false;
 
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (settings.servers.Count == 0)
+                {
+                    throw new Exception("You have no servers defined. You must add a server before you can use this function.");
+                }
+
+                broadcastMessage message = new broadcastMessage();
+                message.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                func.exceptionbox(ex.Message);
+            }
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cxtExit = true;
+            this.Close();
+        }
+
+        private void NotifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+            this.Show();
+            NotifyIcon1.Visible = false;
         }
 
     }
