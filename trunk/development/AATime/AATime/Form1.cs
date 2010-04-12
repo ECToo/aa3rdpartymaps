@@ -18,7 +18,7 @@ namespace AATime
             InitializeComponent();
 
         }
-
+        
         private Point LastCursorPosition;
         private bool IsMouseDown;
         public bool cxtexit = false;
@@ -31,11 +31,23 @@ namespace AATime
             lblBeats.Text = "A:" + Convert.ToDecimal(seconds.ToString("F2"));
             notifyIcon1.Text = "Current AAT: " + Convert.ToString(Convert.ToDecimal(seconds.ToString("F2")));
 
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.Text = "AAT: " + Convert.ToDecimal(seconds.ToString("F2"));
+            }
+            else
+            {
+                this.Text = "AAT (Alien Arena Time)";
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-
+            if (Properties.Settings.Default.minstart)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
+            timer2.Enabled = false;
         }
 
         private void lblBeats_Click(object sender, EventArgs e)
@@ -50,6 +62,8 @@ namespace AATime
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Properties.Settings.Default.Reload();
+            
             try
             {
                 double seconds = TimeSpan.Parse(Convert.ToString(DateTime.UtcNow.TimeOfDay)).TotalSeconds * 0.01157;
@@ -59,6 +73,7 @@ namespace AATime
             catch
             {
             }
+            
         }
 
 
@@ -129,7 +144,7 @@ namespace AATime
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
+           
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -164,6 +179,8 @@ namespace AATime
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
         {
             this.Show();
+            notifyIcon1.Visible = false;
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -187,5 +204,12 @@ namespace AATime
             Help.ShowHelp(this, "http://aa3rdpartymaps.googlecode.com");
         }
 
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
+            
+        }
+
+        
     }
 }
