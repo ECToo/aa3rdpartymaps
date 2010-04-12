@@ -105,6 +105,7 @@
             this.textBox1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.textBox1.Location = new System.Drawing.Point(166, 126);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(70, 20);
             this.textBox1.TabIndex = 5;
             // 
