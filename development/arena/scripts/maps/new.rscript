@@ -30,6 +30,7 @@ textures/metal/fade2
 		scale static 80 static 80
 		colormap 1 1 1
 		beam
+		lensflare
 	}
 }
 textures/arena9/lightwhite
@@ -40,5 +41,16 @@ textures/arena9/lightwhite
 		colormap 1 1 1
 		beam
 		lensflare
+	}
+}
+textures/xenos/jizz3
+{
+	{	
+		map gfx/reflect.tga
+		blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
+		scale static 1 static 1
+		scroll static 0 static 0
+		alphashift 0 0.1 0.1
+		envmap
 	}
 }
