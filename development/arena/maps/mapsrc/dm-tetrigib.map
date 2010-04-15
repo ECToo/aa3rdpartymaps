@@ -2233,19 +2233,19 @@
 {
 "classname" "light"
 "origin" "850.000000 936.000000 382.000000"
-"light" "250"
+"light" "200"
 }
 // entity 2
 {
 "classname" "light"
 "origin" "850.000000 1605.000000 382.000000"
-"light" "250"
+"light" "200"
 }
 // entity 3
 {
 "classname" "light"
 "origin" "850.000000 325.000000 382.000000"
-"light" "250"
+"light" "200"
 }
 // entity 4
 {
@@ -2682,13 +2682,13 @@
 {
 "classname" "light"
 "origin" "1233.000000 936.000000 382.000000"
-"light" "150"
+"light" "200"
 }
 // entity 10
 {
 "classname" "light"
 "origin" "170.000000 1165.000000 382.000000"
-"light" "150"
+"light" "200"
 }
 // entity 11
 {
@@ -2708,7 +2708,7 @@
 {
 "classname" "light"
 "origin" "170.000000 1880.000000 382.000000"
-"light" "50"
+"light" "200"
 }
 // entity 13
 {
@@ -3449,21 +3449,50 @@
 }
 // entity 43
 {
-"classname" "ammo_grenades"
-"origin" "109.000000 2096.000000 67.000000"
-}
-// entity 44
-{
 "classname" "ammo_rockets"
 "origin" "1260.000000 1241.000000 67.000000"
 }
-// entity 45
+// entity 44
 {
 "classname" "weapon_rocketlauncher"
 "origin" "109.000000 204.000000 67.000000"
 }
-// entity 46
+// entity 45
 {
 "classname" "weapon_supershotgun"
 "origin" "1276.000000 307.000000 67.000000"
+}
+// entity 46
+{
+"classname" "light"
+"origin" "170.000000 273.000000 382.000000"
+"light" "200"
+}
+// entity 47
+{
+"classname" "ammo_shells"
+"origin" "97.000000 2016.000000 67.000000"
+}
+// entity 48
+{
+"classname" "ammo_shells"
+"origin" "1678.000000 189.000000 67.000000"
+}
+// entity 49
+{
+"classname" "light"
+"origin" "1681.000000 936.000000 382.000000"
+"light" "200"
+}
+// entity 50
+{
+"classname" "light"
+"origin" "1681.000000 1720.000000 382.000000"
+"light" "200"
+}
+// entity 51
+{
+"classname" "light"
+"origin" "1681.000000 320.000000 382.000000"
+"light" "200"
 }
