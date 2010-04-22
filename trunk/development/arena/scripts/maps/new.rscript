@@ -43,14 +43,31 @@ textures/arena9/lightwhite
 		lensflare
 	}
 }
-textures/xenos/jizz3
+stextures/forsaken/glass
 {
-	{	
-		map gfx/reflect.tga
-		blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
-		scale static 1 static 1
-		scroll static 0 static 0
-		alphashift 0 0.1 0.1
-		envmap
+	{
+		map textures/arena5/lighta.tga
+		blendfunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
+		scale static .5 static .5
+		anim .05
+			textures/arena5/lighta.tga
+			textures/arena5/lightb.tga
+			textures/arena5/lightc.tga
+			textures/arena5/lightd.tga
+			textures/arena5/lighte.tga
+			textures/arena5/lightf.tga
+		end
+	}
+}
+textures/arena9/panel5
+{
+	{
+		lensflare
+	}
+}
+textures/arena3/light1
+{
+	{
+		lensflare
 	}
 }
