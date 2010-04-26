@@ -45,7 +45,7 @@
             // 
             // LinkLabel1
             // 
-            this.LinkLabel1.Location = new System.Drawing.Point(0, 408);
+            this.LinkLabel1.Location = new System.Drawing.Point(0, 415);
             this.LinkLabel1.Name = "LinkLabel1";
             this.LinkLabel1.Size = new System.Drawing.Size(403, 17);
             this.LinkLabel1.TabIndex = 17;
@@ -56,9 +56,9 @@
             // 
             // Label5
             // 
-            this.Label5.Location = new System.Drawing.Point(1, 265);
+            this.Label5.Location = new System.Drawing.Point(1, 261);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(395, 112);
+            this.Label5.Size = new System.Drawing.Size(395, 122);
             this.Label5.TabIndex = 15;
             this.Label5.Text = resources.GetString("Label5.Text");
             // 
@@ -86,9 +86,9 @@
             this.Label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Location = new System.Drawing.Point(-2, 5);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(197, 19);
+            this.Label2.Size = new System.Drawing.Size(200, 19);
             this.Label2.TabIndex = 11;
-            this.Label2.Text = "GS Admin v0.9b STABLE";
+            this.Label2.Text = "GS Admin v1.0 RELEASE";
             // 
             // Button1
             // 
@@ -103,7 +103,7 @@
             // Label1
             // 
             this.Label1.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(-2, 377);
+            this.Label1.Location = new System.Drawing.Point(-2, 383);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(409, 53);
             this.Label1.TabIndex = 9;
@@ -113,7 +113,7 @@
             // 
             // linkLabel2
             // 
-            this.linkLabel2.Location = new System.Drawing.Point(0, 433);
+            this.linkLabel2.Location = new System.Drawing.Point(0, 437);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(403, 17);
             this.linkLabel2.TabIndex = 18;

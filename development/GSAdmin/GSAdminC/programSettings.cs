@@ -47,13 +47,24 @@ namespace GSAdminC
 
                 if (chkMinimize.Checked)
                 {
+                    if (settings.minimize == true)
+                    {
+                        settings.closeNotify = false;
+                    }
+                    else
+                    {
+                        settings.closeNotify = true;
+                    }
                     settings.minimize = true;
+                    
                 }
                 else
                 {
                     settings.minimize = false;
+                    settings.closeNotify = false;
                 }
 
+                
                 if (chkNotify.Checked)
                 {
                     settings.notify = true;
@@ -63,7 +74,8 @@ namespace GSAdminC
                     settings.notify = false;
                 }
 
-                if (chkBots.Checked)
+             /* Removed for now to stop confusion.
+              * if (chkBots.Checked)
                 {
                     settings.showbots = true;
                 }
@@ -71,6 +83,7 @@ namespace GSAdminC
                 {
                     settings.showbots = false;
                 }
+             */
 
                 if (chkJoin.Checked)
                 {
@@ -111,7 +124,8 @@ namespace GSAdminC
 
         private void programSettings_Load(object sender, EventArgs e)
         {
-            #region loadsettings 
+
+            #region loadsettings
             settings.Reload();
 
             if(settings.startup){
@@ -138,10 +152,11 @@ namespace GSAdminC
                 chkNotify.Checked = true;
             }
 
-            if (settings.showbots)
+            /* if (settings.showbots)
             {
                 chkBots.Checked = true;
             }
+            */
             
             if(settings.enablejoin){
                 if(settings.aalocation != "" && settings.playername != ""){

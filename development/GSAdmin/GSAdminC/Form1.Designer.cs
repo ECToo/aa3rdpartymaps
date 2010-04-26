@@ -86,6 +86,7 @@
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.svrRefreshWorker = new System.ComponentModel.BackgroundWorker();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.svrCmdSend.SuspendLayout();
             this.cxtIcon.SuspendLayout();
             this.GroupBox1.SuspendLayout();
@@ -348,7 +349,9 @@
             this.NotifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon1.Icon")));
             this.NotifyIcon1.Text = "GSAdmin";
             this.NotifyIcon1.BalloonTipClicked += new System.EventHandler(this.NotifyIcon1_BalloonTipClicked);
+            this.NotifyIcon1.Click += new System.EventHandler(this.NotifyIcon1_Click);
             this.NotifyIcon1.DoubleClick += new System.EventHandler(this.NotifyIcon1_DoubleClick);
+            this.NotifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon1_MouseDoubleClick);
             // 
             // cxtIcon
             // 
@@ -371,7 +374,7 @@
             // 
             // Button5
             // 
-            this.Button5.Location = new System.Drawing.Point(600, 357);
+            this.Button5.Location = new System.Drawing.Point(593, 357);
             this.Button5.Name = "Button5";
             this.Button5.Size = new System.Drawing.Size(63, 27);
             this.Button5.TabIndex = 23;
@@ -551,11 +554,20 @@
             this.svrRefreshWorker.WorkerReportsProgress = true;
             this.svrRefreshWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(660, 374);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 10);
+            this.panel1.TabIndex = 24;
+            this.panel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 409);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ListView1);
             this.Controls.Add(this.Label4);
             this.Controls.Add(this.Button5);
@@ -570,7 +582,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "GSAdmin 0.9b STABLE - By 3PM";
+            this.Text = "GSAdmin v1.0 RELEASE - By 3PM Productions";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Form1_Click);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -642,6 +654,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel statusRefresh;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

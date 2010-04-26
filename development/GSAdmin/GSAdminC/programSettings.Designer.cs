@@ -30,7 +30,6 @@
         {
             this.txtPlayer = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
-            this.chkBots = new System.Windows.Forms.CheckBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtLocation = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
@@ -50,7 +49,7 @@
             // txtPlayer
             // 
             this.txtPlayer.Enabled = false;
-            this.txtPlayer.Location = new System.Drawing.Point(124, 175);
+            this.txtPlayer.Location = new System.Drawing.Point(124, 153);
             this.txtPlayer.Name = "txtPlayer";
             this.txtPlayer.Size = new System.Drawing.Size(210, 20);
             this.txtPlayer.TabIndex = 27;
@@ -58,25 +57,15 @@
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(11, 178);
+            this.Label2.Location = new System.Drawing.Point(11, 156);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(107, 13);
             this.Label2.TabIndex = 26;
             this.Label2.Text = "Default Player Name:";
             // 
-            // chkBots
-            // 
-            this.chkBots.AutoSize = true;
-            this.chkBots.Location = new System.Drawing.Point(12, 105);
-            this.chkBots.Name = "chkBots";
-            this.chkBots.Size = new System.Drawing.Size(133, 17);
-            this.chkBots.TabIndex = 25;
-            this.chkBots.Text = "Show bots in player list";
-            this.chkBots.UseVisualStyleBackColor = true;
-            // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(340, 146);
+            this.btnBrowse.Location = new System.Drawing.Point(340, 124);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(80, 23);
             this.btnBrowse.TabIndex = 24;
@@ -86,7 +75,7 @@
             // 
             // txtLocation
             // 
-            this.txtLocation.Location = new System.Drawing.Point(124, 148);
+            this.txtLocation.Location = new System.Drawing.Point(124, 126);
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.ReadOnly = true;
             this.txtLocation.Size = new System.Drawing.Size(210, 20);
@@ -95,7 +84,7 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(9, 151);
+            this.Label1.Location = new System.Drawing.Point(9, 129);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(109, 13);
             this.Label1.TabIndex = 22;
@@ -104,7 +93,7 @@
             // chkJoin
             // 
             this.chkJoin.AutoSize = true;
-            this.chkJoin.Location = new System.Drawing.Point(12, 127);
+            this.chkJoin.Location = new System.Drawing.Point(12, 105);
             this.chkJoin.Name = "chkJoin";
             this.chkJoin.Size = new System.Drawing.Size(163, 17);
             this.chkJoin.TabIndex = 21;
@@ -134,7 +123,7 @@
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(173, 201);
+            this.Button1.Location = new System.Drawing.Point(173, 179);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(101, 23);
             this.Button1.TabIndex = 18;
@@ -186,7 +175,7 @@
             // 
             // OK_Button
             // 
-            this.OK_Button.Location = new System.Drawing.Point(280, 201);
+            this.OK_Button.Location = new System.Drawing.Point(280, 179);
             this.OK_Button.Name = "OK_Button";
             this.OK_Button.Size = new System.Drawing.Size(67, 23);
             this.OK_Button.TabIndex = 0;
@@ -196,7 +185,7 @@
             // Cancel_Button
             // 
             this.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancel_Button.Location = new System.Drawing.Point(353, 201);
+            this.Cancel_Button.Location = new System.Drawing.Point(353, 179);
             this.Cancel_Button.Name = "Cancel_Button";
             this.Cancel_Button.Size = new System.Drawing.Size(67, 23);
             this.Cancel_Button.TabIndex = 1;
@@ -210,12 +199,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 236);
+            this.ClientSize = new System.Drawing.Size(429, 208);
             this.Controls.Add(this.Cancel_Button);
             this.Controls.Add(this.OK_Button);
             this.Controls.Add(this.txtPlayer);
             this.Controls.Add(this.Label2);
-            this.Controls.Add(this.chkBots);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.txtLocation);
             this.Controls.Add(this.Label1);
@@ -226,6 +214,7 @@
             this.Controls.Add(this.numMin);
             this.Controls.Add(this.chkAuto);
             this.Controls.Add(this.chkStart);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "programSettings";
             this.ShowInTaskbar = false;
             this.Text = "GSAdmin Settings";
@@ -240,7 +229,6 @@
 
         internal System.Windows.Forms.TextBox txtPlayer;
         internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.CheckBox chkBots;
         internal System.Windows.Forms.Button btnBrowse;
         internal System.Windows.Forms.TextBox txtLocation;
         internal System.Windows.Forms.Label Label1;

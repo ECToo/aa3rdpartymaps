@@ -42,7 +42,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GSAdminC.Properties.Resources.GSAdminSplash;
+            this.BackgroundImage = global::GSAdminC.Properties.Resources.GSAdminSplashNew;
             this.ClientSize = new System.Drawing.Size(450, 250);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "splashScreen";

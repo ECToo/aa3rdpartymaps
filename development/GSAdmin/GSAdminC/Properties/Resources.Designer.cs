@@ -81,9 +81,22 @@ namespace GSAdminC.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap GSAdminSplash {
+        internal static System.Drawing.Bitmap GSAdminSplashNew {
             get {
-                object obj = ResourceManager.GetObject("GSAdminSplash", resourceCulture);
+                object obj = ResourceManager.GetObject("GSAdminSplashNew", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.IO.UnmanagedMemoryStream simmons1 {
+            get {
+                return ResourceManager.GetStream("simmons1", resourceCulture);
+            }
+        }
+        
+        internal static System.Drawing.Bitmap xenos_copy {
+            get {
+                object obj = ResourceManager.GetObject("xenos_copy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

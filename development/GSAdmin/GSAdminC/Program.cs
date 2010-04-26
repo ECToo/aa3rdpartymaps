@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace GSAdminC
 {
@@ -13,9 +14,21 @@ namespace GSAdminC
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            bool createdNew = true;
+            using (Mutex mutex = new Mutex(true, "GSAdmin", out createdNew))
+            {
+                if (createdNew)
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new Form1());
+                }
+                else
+                {
+                    MessageBox.Show("Another instance of GSAdmin is already running","Application Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    
+                }
+            }
         }
     }
 }

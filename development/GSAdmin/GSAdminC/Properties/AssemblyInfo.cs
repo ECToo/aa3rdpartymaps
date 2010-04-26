@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GSAdminC")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("GSAdmin")]
+[assembly: AssemblyDescription("Game Server Administration Tool for Alien Arena")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("GSAdminC")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
+[assembly: AssemblyCompany("3PM Productions")]
+[assembly: AssemblyProduct("GSAdmin")]
+[assembly: AssemblyCopyright("Copyright © 2010 3PM")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

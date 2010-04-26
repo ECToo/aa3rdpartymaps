@@ -16,3 +16,4 @@ C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Relea
 C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.csproj.GenerateResource.Cache
 C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.exe
 C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.pdb
+C:\Users\Davey\Documents\Visual Studio 2008\Projects\GSAdminC\GSAdminC\obj\Release\GSAdminC.egg.resources
