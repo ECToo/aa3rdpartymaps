@@ -63,11 +63,10 @@ namespace GSAdminC
                 Button3.Enabled = true;
                 Button6.Enabled = true;
                 
-            }
-
-            
+            } 
         }
 
+       
         private void Form1_Load(object sender, EventArgs e)
         {
             splashScreen splash = new splashScreen();
@@ -84,7 +83,7 @@ namespace GSAdminC
             }
             
             checksettings();
-
+           
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -152,7 +151,9 @@ namespace GSAdminC
                         {
                             while (i < server.NumPlayers)
                             {
-                                if (settings.showbots)
+                                playerinfo[counter, i] = Convert.ToString(server.Players[i].Ping) + "^" + GameServerInfo.GameServer.CleanName(server.Players[i].Name) + "^" + server.Players[i].Score;
+                                /*Commented out until re-implemented.
+                                 * if (settings.showbots)
                                 {
                                         playerinfo[counter, i] = Convert.ToString(server.Players[i].Ping) + "^" + GameServerInfo.GameServer.CleanName(server.Players[i].Name) + "^" + server.Players[i].Score;
                                     
@@ -163,7 +164,7 @@ namespace GSAdminC
                                     {
                                         playerinfo[counter, i] = Convert.ToString(server.Players[i].Ping) + "^" + GameServerInfo.GameServer.CleanName(server.Players[i].Name) + "^" + server.Players[i].Score;
                                     }
-                                }
+                                }*/
                                 i++;
                             }
                         }
@@ -361,9 +362,12 @@ namespace GSAdminC
                 this.Hide();
                 e.Cancel = true;
                 NotifyIcon1.Visible = true;
-                NotifyIcon1.BalloonTipTitle = "Information";
-                NotifyIcon1.BalloonTipText = "GSAdmin is still running. To exit, right click this icon and choose \"Exit\". This can be changed in the program settings menu.";
-                NotifyIcon1.ShowBalloonTip(8000);
+                if (settings.closeNotify)
+                {
+                    NotifyIcon1.BalloonTipTitle = "Information";
+                    NotifyIcon1.BalloonTipText = "GSAdmin is still running. To exit, right click this icon and choose \"Exit\". This can be changed in the program settings menu. To stop displaying this message, click here.";
+                    NotifyIcon1.ShowBalloonTip(8000);
+                }
             }
 
         }
@@ -669,7 +673,15 @@ namespace GSAdminC
 
         private void NotifyIcon1_BalloonTipClicked(object sender, EventArgs e)
         {
-            notify = false;
+            
+            if (NotifyIcon1.BalloonTipText.Contains("GSAdmin is still running"))
+            {
+                settings.closeNotify = false;
+            }
+            else
+            {
+                notify = false;
+            }
 
         }
 
@@ -701,6 +713,22 @@ namespace GSAdminC
         {
             this.Show();
             NotifyIcon1.Visible = false;
+        }
+
+        private void NotifyIcon1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NotifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            egg egg = new egg();
+            egg.ShowDialog();
         }
 
     }
