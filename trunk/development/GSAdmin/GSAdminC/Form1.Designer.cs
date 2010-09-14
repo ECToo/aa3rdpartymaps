@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ListView1 = new System.Windows.Forms.ListView();
-            this.svrIp = new System.Windows.Forms.ColumnHeader();
-            this.svrName = new System.Windows.Forms.ColumnHeader();
-            this.colMap = new System.Windows.Forms.ColumnHeader();
-            this.svrPlayers = new System.Windows.Forms.ColumnHeader();
-            this.svrPing = new System.Windows.Forms.ColumnHeader();
+            this.svrIp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.svrName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colMap = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.svrPlayers = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.svrPing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.svrCmdSend = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmdServerTitle = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -67,13 +67,13 @@
             this.refreshTmr = new System.Windows.Forms.Timer(this.components);
             this.Button5 = new System.Windows.Forms.Button();
             this.lstPlayers = new System.Windows.Forms.ListView();
-            this.svrPlayerName = new System.Windows.Forms.ColumnHeader();
-            this.svrPlayerScore = new System.Windows.Forms.ColumnHeader();
-            this.svrPlayerPing = new System.Windows.Forms.ColumnHeader();
+            this.svrPlayerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.svrPlayerScore = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.svrPlayerPing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Label1 = new System.Windows.Forms.Label();
             this.lstSvrInfo = new System.Windows.Forms.ListView();
-            this.svrKey = new System.Windows.Forms.ColumnHeader();
-            this.svrValue = new System.Windows.Forms.ColumnHeader();
+            this.svrKey = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.svrValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.Button4 = new System.Windows.Forms.Button();
             this.Button2 = new System.Windows.Forms.Button();
@@ -87,6 +87,7 @@
             this.Label2 = new System.Windows.Forms.Label();
             this.svrRefreshWorker = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.svrCmdSend.SuspendLayout();
             this.cxtIcon.SuspendLayout();
             this.GroupBox1.SuspendLayout();
@@ -305,9 +306,9 @@
             // Button6
             // 
             this.Button6.Enabled = false;
-            this.Button6.Location = new System.Drawing.Point(252, 55);
+            this.Button6.Location = new System.Drawing.Point(200, 55);
             this.Button6.Name = "Button6";
-            this.Button6.Size = new System.Drawing.Size(117, 27);
+            this.Button6.Size = new System.Drawing.Size(109, 27);
             this.Button6.TabIndex = 11;
             this.Button6.Text = "Broadcast Message";
             this.Button6.UseVisualStyleBackColor = true;
@@ -315,9 +316,9 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(252, 19);
+            this.btnRefresh.Location = new System.Drawing.Point(200, 19);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(117, 27);
+            this.btnRefresh.Size = new System.Drawing.Size(109, 27);
             this.btnRefresh.TabIndex = 10;
             this.btnRefresh.Text = "Refresh Now";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -326,9 +327,9 @@
             // Button3
             // 
             this.Button3.Enabled = false;
-            this.Button3.Location = new System.Drawing.Point(131, 19);
+            this.Button3.Location = new System.Drawing.Point(102, 19);
             this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(117, 27);
+            this.Button3.Size = new System.Drawing.Size(95, 27);
             this.Button3.TabIndex = 9;
             this.Button3.Text = "View Banlists";
             this.Button3.UseVisualStyleBackColor = true;
@@ -337,7 +338,7 @@
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(388, 353);
+            this.Label4.Location = new System.Drawing.Point(438, 349);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(195, 26);
             this.Label4.TabIndex = 22;
@@ -374,9 +375,9 @@
             // 
             // Button5
             // 
-            this.Button5.Location = new System.Drawing.Point(593, 357);
+            this.Button5.Location = new System.Drawing.Point(311, 55);
             this.Button5.Name = "Button5";
-            this.Button5.Size = new System.Drawing.Size(63, 27);
+            this.Button5.Size = new System.Drawing.Size(105, 27);
             this.Button5.TabIndex = 23;
             this.Button5.Text = "About";
             this.Button5.UseVisualStyleBackColor = true;
@@ -445,24 +446,26 @@
             // 
             // GroupBox1
             // 
+            this.GroupBox1.Controls.Add(this.button7);
             this.GroupBox1.Controls.Add(this.Button6);
             this.GroupBox1.Controls.Add(this.btnRefresh);
             this.GroupBox1.Controls.Add(this.Button3);
             this.GroupBox1.Controls.Add(this.Button4);
+            this.GroupBox1.Controls.Add(this.Button5);
             this.GroupBox1.Controls.Add(this.Button2);
             this.GroupBox1.Controls.Add(this.Button1);
             this.GroupBox1.Location = new System.Drawing.Point(6, 293);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(379, 88);
+            this.GroupBox1.Size = new System.Drawing.Size(423, 88);
             this.GroupBox1.TabIndex = 21;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Operations";
             // 
             // Button4
             // 
-            this.Button4.Location = new System.Drawing.Point(131, 55);
+            this.Button4.Location = new System.Drawing.Point(102, 55);
             this.Button4.Name = "Button4";
-            this.Button4.Size = new System.Drawing.Size(117, 27);
+            this.Button4.Size = new System.Drawing.Size(95, 27);
             this.Button4.TabIndex = 8;
             this.Button4.Text = "Program Settings";
             this.Button4.UseVisualStyleBackColor = true;
@@ -471,9 +474,9 @@
             // Button2
             // 
             this.Button2.Enabled = false;
-            this.Button2.Location = new System.Drawing.Point(11, 55);
+            this.Button2.Location = new System.Drawing.Point(7, 55);
             this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(117, 27);
+            this.Button2.Size = new System.Drawing.Size(93, 27);
             this.Button2.TabIndex = 7;
             this.Button2.Text = "Remove Server";
             this.Button2.UseVisualStyleBackColor = true;
@@ -481,9 +484,9 @@
             // 
             // Button1
             // 
-            this.Button1.Location = new System.Drawing.Point(11, 19);
+            this.Button1.Location = new System.Drawing.Point(7, 19);
             this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(117, 27);
+            this.Button1.Size = new System.Drawing.Size(93, 27);
             this.Button1.TabIndex = 6;
             this.Button1.Text = "Add New Server";
             this.Button1.UseVisualStyleBackColor = true;
@@ -562,6 +565,16 @@
             this.panel1.TabIndex = 24;
             this.panel1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDoubleClick);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(311, 19);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(105, 27);
+            this.button7.TabIndex = 24;
+            this.button7.Text = "Launch A Server";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -569,11 +582,10 @@
             this.ClientSize = new System.Drawing.Size(671, 409);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ListView1);
-            this.Controls.Add(this.Label4);
-            this.Controls.Add(this.Button5);
             this.Controls.Add(this.lstPlayers);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.lstSvrInfo);
+            this.Controls.Add(this.Label4);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.StatusBar);
             this.Controls.Add(this.Label3);
@@ -583,9 +595,9 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "GSAdmin v1.0 RELEASE - By 3PM Productions";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Form1_Click);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.svrCmdSend.ResumeLayout(false);
             this.cxtIcon.ResumeLayout(false);
             this.GroupBox1.ResumeLayout(false);
@@ -655,6 +667,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel statusRefresh;
         private System.Windows.Forms.Panel panel1;
+        internal System.Windows.Forms.Button button7;
     }
 }
 
