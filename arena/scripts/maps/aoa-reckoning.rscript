@@ -1,0 +1,41 @@
+textures/arena8/crackedrock1
+{
+	{
+		map gfx/grass.tga
+		scale static 8 static 8
+		colormap 1 1 1
+		grass
+		grasstype 0
+	}
+}
+
+textures/arena8/grass2
+{
+	{
+		map gfx/grass.tga
+		scale static 8 static 8
+		colormap 1 1 1
+		grass
+		grasstype 0
+	}
+}
+
+textures/evil/e6launchengine
+{
+    {
+        map gfx/e6launchengine_glow.tga
+        blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
+        alphashift 2.5 0.0 1.0
+        nolightmap
+    }
+}
+
+textures/xempx/a6bt
+{
+	{
+		map gfx/beam3.tga
+		scale static 80 static 80
+		colormap 1 1 1
+		beam
+	}
+}
